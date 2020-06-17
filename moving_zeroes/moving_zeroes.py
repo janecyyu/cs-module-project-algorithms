@@ -2,10 +2,18 @@
 Input: a List of integers
 Returns: a List of integers
 '''
+
+
 def moving_zeroes(arr):
     # Your code here
-
-    pass
+    res = [0] * len(arr)
+    i = 0
+    for num in arr:
+        if num != 0:
+            res[i] = num
+            i += 1
+    return res
+    # ^^^ runtime is O(n)
 
 
 if __name__ == '__main__':
